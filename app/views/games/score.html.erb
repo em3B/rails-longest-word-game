@@ -1,0 +1,16 @@
+<h1>Score</h1>
+<% word = params[:answer] %>
+<% word_arr = params[:answer].split("") %>
+<% res = [] %>
+<% board = params[:letters] %>
+<% word_arr.each do |letter| %>
+  <% res << board.include?(letter.upcase) %>
+<% end %>
+<% if res.include?(false) == true %>
+  <h2>Sorry but <%= word %> cannot be built out of <%= board%></h2>
+<% elsif @user["found"] == false %>
+  <h2>Sorry but <%= word %> does not seem to be a valid English word</h2>
+<% else %>
+  <h2>Congratulations! <%= word %> is a valid English word!</h2>
+<% end %>
+<%= link_to "Play Again", new_path %>

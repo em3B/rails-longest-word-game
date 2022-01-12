@@ -12,3 +12,16 @@
   font-weight: bold;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+input[type="submit" i] {
+  background-color: darkblue;
+  color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+input[type="submit" i]:hover {
+  background-color: darkcyan;
+}
+input[type="text" i] {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
